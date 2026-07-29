@@ -12,7 +12,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     const res = await fetch(
-      "http://localhost:5000/api/admin/login",
+      "https://go-clean-backend-47t6.onrender.com/api/admin/login",
       {
         method: "POST",
         headers: {

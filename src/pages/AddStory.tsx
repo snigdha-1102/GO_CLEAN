@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ImagePlus, X, Send, ArrowLeft } from "lucide-react";
 import { toast } from "sonner";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://go-clean-backend-47t6.onrender.com";
 
 const AddStory = () => {
   const navigate = useNavigate();

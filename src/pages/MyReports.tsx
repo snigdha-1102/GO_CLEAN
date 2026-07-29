@@ -70,13 +70,13 @@ const MyReports = () => {
       if (!user) return;
       try {
         const reportsRes = await fetch(
-          `http://localhost:5000/api/user/${user._id}/reports`
+          `https://go-clean-backend-47t6.onrender.com/api/user/${user._id}/reports`
         );
         const reportsData = await reportsRes.json();
         setReports(reportsData);
 
         const coinsRes = await fetch(
-          `http://localhost:5000/api/user/${user._id}/coins`
+          `https://go-clean-backend-47t6.onrender.com/api/user/${user._id}/coins`
         );
         const coinsData = await coinsRes.json();
         setCoins(coinsData.coins);
@@ -114,7 +114,7 @@ const MyReports = () => {
     }
     try {
       const res = await fetch(
-        "http://localhost:5000/api/rewards/redeem",
+        "https://go-clean-backend-47t6.onrender.com/api/rewards/redeem",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -127,7 +127,7 @@ const MyReports = () => {
         alert(`${t.redeemed}: ${t[reward.key] || reward.key}`);
 
         const cert = await fetch(
-          "http://localhost:5000/api/certificate/generate",
+          "https://go-clean-backend-47t6.onrender.com/api/certificate/generate",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

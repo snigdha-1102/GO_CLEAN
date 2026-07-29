@@ -21,7 +21,7 @@ const Login = () => {
 
     try {
       const res = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://go-clean-backend-47t6.onrender.com/api/auth/login",
         {
           method:"POST",
           headers:{ "Content-Type":"application/json" },
@@ -60,7 +60,7 @@ const handleGoogleLogin = async () => {
     };
 
     // ✅ CALL BACKEND
-    const res = await fetch("http://localhost:5000/api/auth/google", {
+    const res = await fetch("https://go-clean-backend-47t6.onrender.com/api/auth/google", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

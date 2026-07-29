@@ -6,7 +6,7 @@ const handleEmailShare = (report) => {
   const subject = "Waste Issue Report - GO.CLEAN";
 
   const imageUrl = report.image
-    ? `http://localhost:5000/uploads/${report.image}`
+    ? `https://go-clean-backend-47t6.onrender.com/uploads/${report.image}`
     : "No Image";
 
   const body = `
@@ -41,7 +41,7 @@ const AdminDashboard = () => {
   const lang = localStorage.getItem("lang") || "en";
   const t = langData[lang];
 
-  const API = "http://localhost:5000/api/report";
+  const API = "https://go-clean-backend-47t6.onrender.com/api/report";
 
   const fetchReports = async () => {
     try {
@@ -125,7 +125,7 @@ const AdminDashboard = () => {
           src={
             report.image.startsWith("http")
               ? report.image
-              : `http://localhost:5000/uploads/${report.image}`
+              : `https://go-clean-backend-47t6.onrender.com/uploads/${report.image}`
           }
           className="w-full max-h-52 object-cover rounded"
         />

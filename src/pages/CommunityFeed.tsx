@@ -11,7 +11,7 @@ interface Story {
   createdAt?: string;
 }
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://go-clean-backend-47t6.onrender.com";
 
 const CommunityFeed = () => {
   const [stories, setStories] = useState<Story[]>([]);
