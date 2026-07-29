@@ -93,8 +93,6 @@ GO.Clean/
 │   └── App.tsx
 
 
-👨‍💻 Developed By
 
-Salik Azeem
 
-B.Tech CSE | Full Stack Developer
+
