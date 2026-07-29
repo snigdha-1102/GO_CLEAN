@@ -4,7 +4,7 @@ GO.Clean is a smart municipal waste management and citizen engagement platform d
 
 ## 🚀 Live Demo
 
-- Frontend:gocleanandgreen.netlify.app
+- Frontend:https://gocleanandgreen.netlify.app/
 - Backend API:https://go-clean-backend-47t6.onrender.com
 
 ---
