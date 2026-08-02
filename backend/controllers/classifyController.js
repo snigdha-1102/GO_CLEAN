@@ -1,4 +1,4 @@
-import fs from "fs";
+
 import { classifyWaste } from "../services/classifyService.js";
 
 export const classifyImage = async (req, res) => {
@@ -9,15 +9,16 @@ export const classifyImage = async (req, res) => {
       });
     }
 
-    const result = await classifyWaste(req.file.path);
-
-    // Delete uploaded image after processing
-    fs.unlinkSync(req.file.path);
+   const result = await classifyWaste(
+  req.file.buffer,
+  req.file.mimetype
+);
 
     res.status(200).json({
       success: true,
       result,
     });
+
   } catch (error) {
     console.error(error);
 
@@ -25,5 +26,6 @@ export const classifyImage = async (req, res) => {
       success: false,
       message: "Failed to classify image",
     });
-  }
+
+  } 
 };

@@ -1,14 +1,11 @@
 import { GoogleGenAI } from "@google/genai";
-import fs from "fs";
 
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
 
-export const classifyWaste = async (imagePath) => {
+export const classifyWaste = async (imageBuffer, mimeType) => {
   try {
-    const imageBytes = fs.readFileSync(imagePath);
-
     const response = await ai.models.generateContent({
       model: "gemini-3.6-flash",
       contents: [
@@ -27,8 +24,8 @@ Keep the answer under 80 words.
         },
         {
           inlineData: {
-            mimeType: "image/jpeg",
-            data: imageBytes.toString("base64"),
+            mimeType,
+            data: imageBuffer.toString("base64"),
           },
         },
       ],

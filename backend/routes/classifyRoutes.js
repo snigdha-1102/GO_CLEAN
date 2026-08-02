@@ -4,9 +4,10 @@ import { classifyImage } from "../controllers/classifyController.js";
 
 const router = express.Router();
 
-// Store uploaded images temporarily
+const storage = multer.memoryStorage();
+
 const upload = multer({
-  dest: "uploads/",
+  storage,
 });
 
 router.post("/classify", upload.single("image"), classifyImage);
