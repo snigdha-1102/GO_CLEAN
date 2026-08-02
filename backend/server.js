@@ -11,6 +11,7 @@ import certificateRoutes from "./routes/certificateRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import storyRoutes from "./routes/storyRoutes.js";
 import chatRoutes from "./routes/chatRoutes.js";
+import classifyRoutes from "./routes/classifyRoutes.js";
 
 dotenv.config();
 
@@ -29,6 +30,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/uploads", express.static("uploads"));
 app.use("/api/story", storyRoutes);
 app.use("/api/chat", chatRoutes);
+app.use("/api/classify", classifyRoutes);
 
 // DB CONNECTION
 mongoose.connect(process.env.MONGO_URI)
