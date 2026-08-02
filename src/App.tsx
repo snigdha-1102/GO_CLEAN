@@ -15,6 +15,8 @@ import BottomBar from "./components/BottomBar";
 
 import NotFound from "./pages/NotFound";
 import ChatBot from "./components/ChatBot";
+import Events from "@/pages/Events";
+import WasteClassifier from "@/pages/WasteClassifier";
 
 
 // Existing
@@ -72,6 +74,8 @@ const App = () => (
             <Route path="/my-reports" element={<MyReports />} />
             <Route path="/feed" element={<CommunityFeed />} />
             <Route path="/add-story" element={<AddStory />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/waste-classifier" element={<WasteClassifier />} />
           </Routes>
 
           {/* FOOTER */}

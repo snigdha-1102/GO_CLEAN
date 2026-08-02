@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { X, Trash2, MessageCircle } from "lucide-react";
 import { sendMessage } from "../services/chatService";
+import { Bot } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 type ChatMessage = {
   sender: "user" | "bot";
@@ -8,6 +10,7 @@ type ChatMessage = {
 };
 
 const ChatBot = () => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
@@ -100,6 +103,14 @@ const clearChat = () => {
 };
   return (
     <>
+     {/* AI Waste Classifier Button */}
+<button
+  onClick={() => navigate("/waste-classifier")}
+  className="fixed bottom-48 right-6 w-16 h-16 rounded-full bg-blue-600 text-white shadow-xl hover:scale-110 hover:bg-blue-700 transition-all duration-300 z-[9999] flex items-center justify-center"
+  title="AI Waste Classifier"
+>
+  <Bot size={30} />
+</button>
       {/* Floating Chat Button */}
       {!open && (
         <button
