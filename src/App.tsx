@@ -9,12 +9,13 @@ import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import MyReports from "@/pages/MyReports";
 import AdminLogin from "@/pages/AdminLogin";
-
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BottomBar from "./components/BottomBar";
 
 import NotFound from "./pages/NotFound";
+import ChatBot from "./components/ChatBot";
+
 
 // Existing
 import BinQRGenerator from "./components/BinQRGenerator";
@@ -79,6 +80,8 @@ const App = () => (
 
         {/* MOBILE BOTTOM BAR */}
         <BottomBar />
+
+        <ChatBot />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
