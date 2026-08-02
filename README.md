@@ -45,6 +45,28 @@ GO.Clean is a smart municipal waste management and citizen engagement platform d
 - Update status
 - User monitoring
 
+## **🤖 AI Waste Image Classifier**
+Upload an image of waste
+AI identifies the waste type using Google Gemini Vision
+Suggests:
+♻️ Waste category
+🗑️ Correct disposal bin
+✅ Recyclability
+🌱 Eco-friendly disposal tips
+
+## **💬 EcoBot AI Assistant**
+AI-powered chatbot using Google Gemini
+Answers questions related to:
+Waste segregation
+Recycling
+Environmental awareness
+Sustainable practices
+
+## **📢 Environmental Initiatives & Events**
+View official environmental campaigns and municipal initiatives
+Direct links to government and municipal websites
+Dedicated Events page for awareness programs
+
 ### 🌐 Multi-language Support
 Supports 10+ languages for accessibility and wider reach.
 
